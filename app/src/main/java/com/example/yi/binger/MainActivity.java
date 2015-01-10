@@ -123,7 +123,7 @@ public class MainActivity extends ActionBarActivity implements
 
             //send {uid, long, lat} to server
             //http://stackoverflow.com/questions/10432885/http-put-request
-            HttpPut httpPut = new HttpPut("http://server/updateLocation.php");
+ 
 
         } else {
             //error msg

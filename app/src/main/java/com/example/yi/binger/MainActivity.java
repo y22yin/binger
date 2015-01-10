@@ -14,8 +14,6 @@ import com.google.android.gms.location.LocationListener;
 import com.google.android.gms.location.LocationRequest;
 import com.google.android.gms.location.LocationServices;
 
-import org.apache.http.client.methods.HttpPut;
-
 //import com.google.android.gms.common.GooglePlayServicesClient.ConnectionCallbacks;
 //import com.google.android.gms.common.GooglePlayServicesClient.OnConnectionFailedListener;
 
@@ -88,18 +86,8 @@ public class MainActivity extends ActionBarActivity implements
     @Override
     public void onConnected(Bundle connectionHint) {
         Log.i("mainActivity", "onConnected");
-        mLastLocation = LocationServices.FusedLocationApi.getLastLocation(mGoogleApiClient);
-        if (mLastLocation != null) {
-            myLong.setText(String.valueOf(mLastLocation.getLatitude()));
-            myLat.setText(String.valueOf(mLastLocation.getLongitude()));
-        } else {
-            //error msg
-        }
-
-        LocationServices.FusedLocationApi.requestLocationUpdates(
+         LocationServices.FusedLocationApi.requestLocationUpdates(
                 mGoogleApiClient, mLocationRequest, this);
-
-
     }
 
     @Override
@@ -123,7 +111,7 @@ public class MainActivity extends ActionBarActivity implements
 
             //send {uid, long, lat} to server
             //http://stackoverflow.com/questions/10432885/http-put-request
- 
+
 
         } else {
             //error msg

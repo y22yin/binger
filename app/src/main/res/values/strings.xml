@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Binger</string>
+    <string name="current_location">My Current Location</string>
+    <string name="action_settings">Settings</string>
+    <string name="current_long_holder">null</string>
+    <string name="current_lat_holder">null</string>
+
+</resources>
